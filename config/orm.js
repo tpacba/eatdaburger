@@ -10,7 +10,7 @@ var orm = {
     },
     insertOne: function(table, col, vals, cb) {
         var queryString = "INSERT INTO ?? (??) VALUES (?)";
-        connection.query(queryString, [table, col, JSON.stringify(vals)], function(err, data) {
+        connection.query(queryString, [table, col, vals], function(err, data) {
             if (err) throw err;
             cb(data);
         })
