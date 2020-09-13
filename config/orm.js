@@ -15,9 +15,9 @@ var orm = {
             cb(data);
         })
     },
-    updateOne: function(table, col, colCondition, valCondition, cb) {
-        var queryString = "UPDATE ?? SET ?? WHERE ?? = ?";
-        connection.query(queryString, [table, col, colCondition, valCondition], function(err, data) {
+    updateOne: function(table, col, vals, colCondition, valCondition, cb) {
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+        connection.query(queryString, [table, col, vals, colCondition, valCondition], function(err, data) {
             if (err) throw err;
             cb(data);
         })
