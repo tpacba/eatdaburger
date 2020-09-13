@@ -1,0 +1,65 @@
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <div class="row center">
+            <img style="width:125px" src="https://i.pinimg.com/originals/59/bf/11/59bf11805ef75743c3c4dc30514a9564.png">
+        </div>
+        <h1 class="header center orange-text">Eat-Da-Burger!</h1>
+        <div class="row center">
+            <h5 class="header col s12 light">a restaurant app that lets users input the names of burgers they'd like to
+                eat</h5>
+        </div>
+        <div class="row center">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                        <label for="icon_prefix2">Burger Name</label>
+                    </div>
+                </div>
+                <div class="row center">
+                    <a id="download-button" class="btn-large waves-effect waves-light orange">submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <ul>
+                            {{#each burgersNotDevoured}}
+                                <li>
+                                    <p>
+                                        <a class="btn-small waves-effect waves-light orange"><i class="material-icons left">local_dining</i>DEVOUR</a>
+                                        "{{this.burger_name}}"
+                                    </p>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <ul>
+                            {{#each burgersDevoured}}
+                                <li>
+                                    <p>
+                                        <a class="btn-small waves-effect waves-light orange disabled"><i class="material-icons left">local_dining</i>DEVOUR</a>
+                                        "{{this.burger_name}}"
+                                    </p>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+    </div>
+</div>

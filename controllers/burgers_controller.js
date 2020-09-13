@@ -4,12 +4,19 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-    burger.selectAll(function(data) {
-        var hbsObject = {
-            burgers: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+    var hbsObject = {}
+
+    burger.selectNotDevoured(function(result) {
+        hbsObject.burgersNotDevoured = result;
+        console.log("devoured: false" + JSON.stringify(hbsObject.burgersNotDevoured));
+
+        burger.selectDevoured(function(data) {
+            hbsObject.burgersDevoured = data;
+
+            console.log("devoured: true" + JSON.stringify(hbsObject.burgersDevoured));
+            console.log(hbsObject);
+            res.render("index", hbsObject);
+        })
     });
 });
 
