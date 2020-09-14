@@ -26,7 +26,7 @@ Run `npm install` to install the following dependencies.
 
 ## Usage
 
-The application is run on [Heroku](). If you would like to run on local host, run `npm server.js` to start the application. [Check out this video of the app for a run-through of how it works](https://youtu.be/msvdn95x9OM).
+The application is run on [Heroku](https://obscure-tor-38475.herokuapp.com/). If you would like to run on local host, run `npm server.js` to start the application. [Check out this video of the app for a run-through of how it works](https://youtu.be/msvdn95x9OM).
 
 ## Questions
 
